@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Mis albums
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,21 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Mis albums</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-card *ngFor="let album of albums">
+    <img [src]="album.foto">
+    <ion-card-header>
+      <ion-card-title>{{album.titulo}}</ion-card-title>
+      <ion-card-subtitle>{{album.anioPublicacion}}</ion-card-subtitle>
+      {{album.nombreArtista}}
+      <div>
+        <ion-button icon-only routerLink="/api/v1/artistas">
+          <ion-icon name="caret-forward-outline"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-card-header>
+  </ion-card>
 </ion-content>
