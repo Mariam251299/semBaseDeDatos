@@ -7,6 +7,7 @@ import { AlbumsService } from '../api/albums.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit {
+
   albums =[];
   //   {
   //     titulo: "Four",

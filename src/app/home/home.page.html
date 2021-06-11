@@ -20,10 +20,11 @@
       <ion-card-subtitle>{{album.anioPublicacion}}</ion-card-subtitle>
       {{album.nombreArtista}}
       <div>
-        <ion-button icon-only routerLink="/api/v1/artistas">
+        <ion-button icon-only fill="clear" size="large" [routerLink]="['/track', album.id]">
           <ion-icon name="caret-forward-outline"></ion-icon>
         </ion-button>
       </div>
+
     </ion-card-header>
   </ion-card>
 </ion-content>

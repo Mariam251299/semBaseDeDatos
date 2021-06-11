@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button fill="clear" routerLink="/home">
+      <ion-icon name="chevron-back-outline"></ion-icon>
+      Back
+    </ion-button>
+    <ion-title>Tracks</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tracks</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card *ngFor="let track of tracks">
+    <ion-card-header>
+      <!-- <ion-card-title></ion-card-title>
+      <ion-card-subtitle></ion-card-subtitle> -->
+      <div>
+        {{track.id}}
+        {{track.titulo}}
+        {{track.duracion}}
+        {{idAlbum}}
+      </div>
+    </ion-card-header>
+  </ion-card>
+</ion-content>
